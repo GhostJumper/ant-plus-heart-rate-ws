@@ -3,6 +3,9 @@
 This application listens to ANT+ heart rate devices like Garmin smartwatches and sends the heart rate data via WebSockets. It can be used to monitor your heart rate on your PC or for other applications, such as syncing your heart rate with your avatar in VRChat using OSC.
 
 This project is based on the [incyclist/ant-plus](https://github.com/incyclist/ant-plus) repository.
+
+Skip to [Step 9](#alternative-docker-compose) if you only care about running it.
+
 ## Features 🌟
 
 - Listen to ANT+ heart rate devices
@@ -75,4 +78,17 @@ Replace `/dev/bus/usb/001/002` with the path to your Garmin USB device. This can
 
 ## Configuration 🔧
 
-The WebSocket server listens on port 8080 by default. You can change this by updating the `port` value in the `WebSocket.Server` configuration within the `heart-rate`.js script.
+The WebSocket server listens on port 8080 by default. You can change this by updating the `port` value in the `WebSocket.Server` configuration within the `heart-rate.js` script.
+
+## Alternative (Docker-Compose)
+
+The repository features a `docker-compose.yml` for an easier deployment.
+
+9. To start the container this way, run the following command:
+
+```bash
+docker-compose up
+
+# if that doesn't work try running with sudo or as root
+sudo docker-compose up
+```
