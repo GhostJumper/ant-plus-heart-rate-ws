@@ -1,0 +1,17 @@
+{
+    "name": "garmin-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "heart-rate.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Unrea1",
+    "license": "ISC",
+    "dependencies": {
+      "incyclist-ant-plus": "^0.1.18",
+      "ws": "^8.13.0"
+    }
+  }
+  
