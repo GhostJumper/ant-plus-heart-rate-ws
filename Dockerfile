@@ -1,4 +1,5 @@
-FROM node:18.16.0-bullseye-slim
+# First stage: builder
+FROM node:18.16.0-bullseye-slim AS builder
 
 WORKDIR /app
 
@@ -9,7 +10,15 @@ RUN apt-get update && \
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci --only=production
+
+# Second stage: final image
+FROM node:18.16.0-bullseye-slim
+
+WORKDIR /app
+
+# Copy the runtime dependencies from the builder stage
+COPY --from=builder /app/node_modules /app/node_modules
 
 COPY heart-rate.js ./
 
