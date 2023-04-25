@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3"
 services:
   ant-plus-heart-rate-ws:
     image: unrea1/ant-plus-heart-rate-ws:1
