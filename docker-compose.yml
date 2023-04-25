@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  ant-plus-heart-rate-ws:
+    image: unrea1/ant-plus-heart-rate-ws:1
+    container_name: ant-plus-heart-rate-ws
+    devices:
+      - /dev/bus/usb/001/002
+    ports:
+      - "8080:8080"
