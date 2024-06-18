@@ -11,7 +11,7 @@
     "license": "ISC",
     "dependencies": {
       "incyclist-ant-plus": "^0.1.18",
-      "ws": "^8.13.0"
+      "ws": "^8.17.1"
     }
   }
   
